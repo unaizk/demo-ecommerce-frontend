@@ -15,15 +15,12 @@ const AddProductScreen = () => {
     const [addProduct, {isLoading}] = useProductAddMutation()
 
     const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        setImage(file);
-        console.log(image);
-    };
-
-    useEffect(() => {
-      // This will log the updated state value
+      e.persist();
+      const file = e.target.files[0];
+      setImage(file);
       console.log(image);
-    }, [image]); // The effect will re-run whenever 'image' changes
+    };
+    
 
     const submitHandler = async(e)=>{
         e.preventDefault();
