@@ -5,7 +5,7 @@ import { useAddToCartMutation } from "../slices/usersApliSlice";
 
 const ProductCard = ({ _id,name, description, price, image, category }) => {
 
-    const PROFILE_IMAGE_DIR_PATH = `https://demo-ecommerce.unaizk.com/home/ubuntu/demo-ecommerce-backend/backend/public/productImage/${image}`;
+    const PROFILE_IMAGE_DIR_PATH = `https://demo-ecommerce.unaizk.com/productImage/file_1706546425249.png`;
 
     const navigate = useNavigate();
 
@@ -18,10 +18,9 @@ const ProductCard = ({ _id,name, description, price, image, category }) => {
         navigate(`/productDetail`, { state: { product: productDetail } });
         
     }
-  
+
 
     const addToCartHandler = async(productId) =>{
-      
         console.log(productId,'product');
         try {
 
