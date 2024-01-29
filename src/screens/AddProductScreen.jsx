@@ -20,6 +20,11 @@ const AddProductScreen = () => {
         console.log(image);
     };
 
+    useEffect(() => {
+      // This will log the updated state value
+      console.log(image);
+    }, [image]); // The effect will re-run whenever 'image' changes
+
     const submitHandler = async(e)=>{
         e.preventDefault();
 
