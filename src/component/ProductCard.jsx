@@ -5,7 +5,8 @@ import { useAddToCartMutation } from "../slices/usersApliSlice";
 
 const ProductCard = ({ _id,name, description, price, image, category }) => {
 
-    const PROFILE_IMAGE_DIR_PATH = `https://demo-ecommerce.unaizk.com/productImage/file_1706546425249.png`;
+  const PROFILE_IMAGE_DIR_PATH = `https://demo-ecommerce.unaizk.com/golbalSearch/products/${image}`;
+
 
     const navigate = useNavigate();
 
