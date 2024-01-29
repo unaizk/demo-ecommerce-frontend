@@ -40,7 +40,7 @@ const AddProductScreen = () => {
             setCategory('');
             setDescription('');
             setPrice(0);
-            setImage(null);
+            
         } catch (err) {
             toast.error(err?.data?.message || err.error);
         }
