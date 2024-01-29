@@ -15,7 +15,7 @@ const ProductList = () => {
   const [listProducts] = useListProductMutation()
   const [unlistProducts] = useUnlistProductMutation()
 
-  const PROFILE_IMAGE_DIR_PATH = 'https://demo-ecommerce.unaizk.com/';
+  const PROFILE_IMAGE_DIR_PATH = 'https://demo-ecommerce.unaizk.com/golbalSearch/products/';
 
   useEffect(() => {
     const getAllProduct = async () => {
