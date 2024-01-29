@@ -3,24 +3,23 @@ import { useEffect, useState } from "react";
 import {
   useLoadingCartMutation,
   useChangingQuantityMutation,
-  useDeletingProductMutation
+  useDeletingProductMutation,
 } from "../slices/usersApliSlice";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Loader from "../component/Loader";
 
-
 const CartScreen = () => {
-  
   const [productDetails, setProductDetails] = useState([]);
   const [refreshToggle, setRefreshToggle] = useState(false);
   const navigate = useNavigate();
 
   const [changeQuantity] = useChangingQuantityMutation();
   const [loadingCart, { isLoading }] = useLoadingCartMutation();
-  const [deletingProduct] = useDeletingProductMutation()
+  const [deletingProduct] = useDeletingProductMutation();
 
-  const PROFILE_IMAGE_DIR_PATH = "https://demo-ecommerce.unaizk.com/golbalSearch/products/";
+  const PROFILE_IMAGE_DIR_PATH =
+    "https://demo-ecommerce.unaizk.com/golbalSearch/products/";
 
   useEffect(() => {
     const getCartDetails = async () => {
@@ -56,11 +55,10 @@ const CartScreen = () => {
     return subtotal;
   };
 
-  const deleteHandleClick = async(productId) => {
-    
+  const deleteHandleClick = async (productId) => {
     const isConfirmed = window.confirm("Do you want to delete this product?");
     if (isConfirmed) {
-      await deletingProduct({productId}).unwrap()
+      await deletingProduct({ productId }).unwrap();
       toast.success("Product Deleted");
       // Toggle the dummy state to trigger a re-render
       setRefreshToggle(!refreshToggle);
@@ -111,10 +109,12 @@ const CartScreen = () => {
                                 className="h-16 w-16 mr-4"
                                 src={
                                   PROFILE_IMAGE_DIR_PATH +
-                                  product.productId.image
+                                  (product.productId.image ||
+                                    "default-image.jpg") // Use a default image if 'image' is null
                                 }
                                 alt={product.productId.name}
                               />
+
                               <span className="font-semibold text-sm">
                                 {product.productId.name}
                               </span>
@@ -147,7 +147,12 @@ const CartScreen = () => {
                           <td className="py-4">
                             ₹{product.productId.price * product.quantity}
                           </td>
-                          <td className="py-4" onClick={() => deleteHandleClick(product.productId._id)}>
+                          <td
+                            className="py-4"
+                            onClick={() =>
+                              deleteHandleClick(product.productId._id)
+                            }
+                          >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
