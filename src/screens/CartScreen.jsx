@@ -109,7 +109,7 @@ const CartScreen = () => {
                                 className="h-16 w-16 mr-4"
                                 src={
                                   PROFILE_IMAGE_DIR_PATH +
-                                  (product.productId.image ||
+                                  (product.productId.image ? product.productId.image :
                                     "default-image.jpg") // Use a default image if 'image' is null
                                 }
                                 alt={product.productId.name}
