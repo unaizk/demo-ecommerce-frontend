@@ -107,10 +107,7 @@ const CartScreen = () => {
                             <div className="flex items-center">
                               <img
                                 className="h-16 w-16 mr-4"
-                                src={
-                                  PROFILE_IMAGE_DIR_PATH +
-                                  product?.productId?.image   // Use a default image if 'image' is null
-                                }
+                                src={'kkk'}
                                 alt={product.productId.name}
                               />
 
