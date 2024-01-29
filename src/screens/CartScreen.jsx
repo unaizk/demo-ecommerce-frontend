@@ -20,7 +20,7 @@ const CartScreen = () => {
   const [loadingCart, { isLoading }] = useLoadingCartMutation();
   const [deletingProduct] = useDeletingProductMutation()
 
-  const PROFILE_IMAGE_DIR_PATH = "https://demo-ecommerce.unaizk.com/";
+  const PROFILE_IMAGE_DIR_PATH = "https://demo-ecommerce.unaizk.com/productImages/";
 
   useEffect(() => {
     const getCartDetails = async () => {
