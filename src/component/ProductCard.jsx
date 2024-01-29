@@ -37,7 +37,7 @@ const ProductCard = ({ _id,name, description, price, image, category }) => {
         <div className="relative mx-4 mt-4 overflow-hidden bg-white bg-clip-border rounded-xl h-60 lg:h-96" onClick={() =>{navigateToProductDetailPage()}}>
           <img src={PROFILE_IMAGE_DIR_PATH} alt="card-image" className=" w-full h-full" />
         </div>
-        <div className="p-2">
+        <div className="p-4">
           <div className="flex items-center justify-between mb-2">
             <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
               {name}
