@@ -20,7 +20,7 @@ const ProductDetailPage = () => {
     const [image, setImage] = useState(product.image);
     const [productId, setProductId] = useState(product._id);
 
-    const IMAGE_URL = `http://localhost:5000/productImage/${image}`
+    const IMAGE_URL = `https://demo-ecommerce.unaizk.com/productImage/${image}`
 
     const addToCartHandler = async(productId) =>{
         console.log(productId,'product');
