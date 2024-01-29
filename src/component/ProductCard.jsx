@@ -18,9 +18,10 @@ const ProductCard = ({ _id,name, description, price, image, category }) => {
         navigate(`/productDetail`, { state: { product: productDetail } });
         
     }
-
+  
 
     const addToCartHandler = async(productId) =>{
+      
         console.log(productId,'product');
         try {
 
