@@ -23,7 +23,7 @@ const EditProductScreen = () => {
     const [productId, setProductId] = useState(product._id);
     
 
-    const IMAGE_URL = `https://demo-ecommerce.unaizk.com/golbalSearch/products/`;
+    const IMAGE_URL = `https://demo-ecommerce.unaizk.com/golbalSearch/products/${image}`;
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];

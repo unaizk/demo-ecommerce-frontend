@@ -106,7 +106,7 @@ const CartScreen = () => {
                           <td className="py-4">
                             <div className="flex items-center">
                               <img
-                                className="h-16 w-16 mr-4"
+                                className="h-16 w-16 mr-4 object-contain"
                                 src={
                                   PROFILE_IMAGE_DIR_PATH +
                                   product?.productId?.image   // Use a default image if 'image' is null
