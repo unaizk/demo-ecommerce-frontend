@@ -107,22 +107,25 @@ const CartScreen = () => {
                             <div className="flex items-center">
                               <img
                                 className="h-16 w-16 mr-4"
-                                src={'kkk'}
-                                alt={product.productId.name}
+                                src={
+                                  PROFILE_IMAGE_DIR_PATH +
+                                  product?.productId?.image   // Use a default image if 'image' is null
+                                }
+                                alt={'image'}
                               />
 
                               <span className="font-semibold text-sm">
-                                {product.productId.name}
+                                {product?.productId?.name}
                               </span>
                             </div>
                           </td>
-                          <td className="py-4">₹{product.productId.price}</td>
+                          <td className="py-4">₹{product?.productId?.price}</td>
                           <td className="py-4">
                             <div className="flex items-center">
                               <button
                                 className="border rounded-md py-2 px-4 mr-2"
                                 onClick={() =>
-                                  changeTheQuantity("-1", product.productId._id)
+                                  changeTheQuantity("-1", product?.productId?._id)
                                 }
                               >
                                 -
@@ -133,7 +136,7 @@ const CartScreen = () => {
                               <button
                                 className="border rounded-md py-2 px-4 ml-2"
                                 onClick={() =>
-                                  changeTheQuantity("1", product.productId._id)
+                                  changeTheQuantity("1", product?.productId?._id)
                                 }
                               >
                                 +
@@ -141,12 +144,12 @@ const CartScreen = () => {
                             </div>
                           </td>
                           <td className="py-4">
-                            ₹{product.productId.price * product.quantity}
+                            ₹{product?.productId?.price * product?.quantity}
                           </td>
                           <td
                             className="py-4"
                             onClick={() =>
-                              deleteHandleClick(product.productId._id)
+                              deleteHandleClick(product?.productId._id)
                             }
                           >
                             <svg
