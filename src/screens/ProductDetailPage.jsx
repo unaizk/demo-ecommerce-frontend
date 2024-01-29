@@ -34,11 +34,11 @@ const ProductDetailPage = () => {
     }
   
   return (
-    <div className="container mx-auto p-4 pt-20 shadow-sm">
+    <div className="container mx-auto p-4 pt-20 shadow-sm  ">
       <div className="bg-white rounded-lg  p-8">
         <div className="flex flex-col lg:flex-row">
           <div
-            className="mr-8 lg:mb-0 mb-4"
+            className="mr-8 lg:mb-0 mb-4 "
             style={{
               width: "500px",
               display: "flex",
@@ -49,11 +49,11 @@ const ProductDetailPage = () => {
             <img
               src={IMAGE_URL}
               alt='image'
-              className=" rounded-lg mx-auto shadow-sm  lg:h-auto"
+              className=" rounded-lg mx-auto shadow-sm  lg:h-auto "
               style={{height: '500px'}}
             />
           </div>
-          <div className="sm:mx-auto md:mx-auto lg:mx-0">
+          <div className="mx-auto md:mx-auto lg:mx-0">
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">
               {name}
             </h2>

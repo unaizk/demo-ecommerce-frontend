@@ -29,13 +29,13 @@ const Header = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-around items-stretch pt-2 pb-2">
-      <div className="flex items-center sm:mx-auto md:mx-0 lg:mx-0">
+      <div className="flex items-center mx-auto md:mx-0 lg:mx-0">
         <img onClick={() =>{navigate('/')}} className="w-24 cursor-pointer" src={'/logo.png'} alt="Company Logo" />
       </div>
-      <div className="sm:flex items-center sm:mx-auto md:mx-0 lg:mx-0">
+      <div className="sm:flex items-center mx-auto md:mx-0 lg:mx-0">
         <SearchBar  />
       </div>
-      <div className="flex items-center sm:mx-auto md:mx-0 lg:mx-0">
+      <div className="flex items-center mx-auto md:mx-0 lg:mx-0">
         <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
           {userInfo ? `Welcome ${userInfo.name}` : <img src={'/profile.jpg'} className="w-5 bg-gray-200" alt="" />}
         </div>
