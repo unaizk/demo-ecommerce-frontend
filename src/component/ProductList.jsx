@@ -15,7 +15,7 @@ const ProductList = () => {
   const [listProducts] = useListProductMutation()
   const [unlistProducts] = useUnlistProductMutation()
 
-  const PROFILE_IMAGE_DIR_PATH = 'https://demo-ecommerce.unaizk.com/productImage/';
+  const PROFILE_IMAGE_DIR_PATH = 'https://demo-ecommerce.unaizk.com/public/productImage/';
 
   useEffect(() => {
     const getAllProduct = async () => {
