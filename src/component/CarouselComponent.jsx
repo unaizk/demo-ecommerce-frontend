@@ -8,19 +8,19 @@ const CarouselComponent = () => {
     <img
       src={'/banner.png'}
       alt="image 1"
-      className=" w-full "
+      className=" w-full object-contain "
       style={{ height: "500px" }}
     />
     <img
       src={'/s24.jpg'}
       alt="image 2"
-      className=" w-full "
+      className=" w-full object-contain "
       style={{ height: "500px" }}
     />
     <img
       src={'/iphone 15.jpg'}
       alt="image 3"
-      className=" w-full "
+      className=" w-full object-contain "
       style={{ height: "500px" }}
     />
   </Carousel>
