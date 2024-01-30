@@ -28,7 +28,7 @@ const AdminHeader = () => {
           <img onClick={() =>{navigate('/admin')}} className="w-24 cursor-pointer" src={'/logo.png'} alt="Company Logo" /><span className='font-bold'>Admin</span>
         </div>
         <div className="flex items-center mr-10 mx-auto md:mx-0 lg:mx-0">
-          <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer ">
+          <div className="sm:mt-5 bg-gray-50 rounded-full p-3 mr-4 cursor-pointer ">
             <p className='mx-auto text-sm'>{ `Welcome ${adminInfo.name}` }</p>
             
           </div>
@@ -46,7 +46,7 @@ const AdminHeader = () => {
         <div className="flex flex-start md:flex-row items-stretch pt-2 pb-2 ml-5 mx-auto md:mx-0 lg:mx-0">
           <img
             onClick={() => navigate('/admin')}
-            className="w-24 cursor-pointer"
+            className="w-24 ml-5 cursor-pointer"
             src={'/logo.png'}
             alt="Company Logo"
           />
