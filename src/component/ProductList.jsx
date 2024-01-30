@@ -94,7 +94,7 @@ const ProductList = () => {
           {products.map((product) => (
             <tr key={product._id} className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
               <td className="px-6 py-4">
-                <img src={PROFILE_IMAGE_DIR_PATH + product.image} alt="Product" style={{ maxWidth: "50px" }} />
+                <img src={PROFILE_IMAGE_DIR_PATH + product.image} alt="Product" className="object-contain" style={{ maxWidth: "50px" }} />
               </td>
               <td className="px-6 py-4">{product.name}</td>
               <td className="px-6 py-4">{product.category}</td>

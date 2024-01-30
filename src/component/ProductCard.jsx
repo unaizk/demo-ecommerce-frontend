@@ -35,7 +35,7 @@ const ProductCard = ({ _id,name, description, price, image, category }) => {
       <div className="lg:w-1/3 sm:w-full mb-8 lg:mb-0 mx-auto md:mx-0 lg:mx-0" style={{marginBottom : '30px'}} >
       <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl mx-auto" style={{width : '340px'}}>
         <div className="relative mx-4 mt-4 overflow-hidden bg-white bg-clip-border rounded-xl h-60 lg:h-96" onClick={() =>{navigateToProductDetailPage()}}>
-          <img src={PROFILE_IMAGE_DIR_PATH} alt="card-image" className=" w-full h-full" />
+          <img src={PROFILE_IMAGE_DIR_PATH} alt="card-image" className=" w-full h-full object-contain" />
         </div>
         <div className="p-6 pt-2">
           <div className="flex items-center justify-between mb-2">

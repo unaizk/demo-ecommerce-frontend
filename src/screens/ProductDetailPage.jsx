@@ -48,7 +48,7 @@ const ProductDetailPage = () => {
             <img
               src={IMAGE_URL}
               alt='image'
-              className=" rounded-lg mx-auto shadow-sm  lg:h-auto "
+              className=" rounded-lg mx-auto shadow-sm  lg:h-auto object-contain "
               style={{height: '500px'}}
             />
           </div>
