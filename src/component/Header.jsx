@@ -37,21 +37,22 @@ const Header = () => {
       </div>
       <div className="flex items-center mx-auto md:mx-0 lg:mx-0">
         <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
-          {userInfo ? `Welcome ${userInfo.name}` : <img src={'/profile.jpg'} className="w-5 bg-gray-200" alt="" />}
+          {userInfo ? <span className='mx-auto text-sm'> {`Welcome ${userInfo.name}`}</span> : <img src={'/profile.jpg'} className="w-5 bg-gray-200 mx-auto" alt="" />}
+                  
         </div>
         <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
-          <img src={'/Heart.png'} className="w-5 bg-gray-200" alt="" />
+          <img src={'/Heart.png'} className="w-5 bg-gray-200 mx-auto" alt="" />
         </div>
         <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
-          <img onClick={() =>{navigate('/cart')}} src={'/cart.png'} className="w-5 bg-gray-200" alt="" />
+          <img onClick={() =>{navigate('/cart')}} src={'/cart.png'} className="w-5 bg-gray-200 mx-auto" alt="" />
         </div>
         <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
           {userInfo ? (
-            <span className="font-bold" onClick={handleLogoutClick}>
+            <span className="font-bold text-sm mx-auto" onClick={handleLogoutClick}>
               Log Out
             </span>
           ) : (
-            <span className="font-bold" onClick={handleLoginClick}>
+            <span className="font-bold text-sm mx-auto" onClick={handleLoginClick}>
               Log In
             </span>
           )}

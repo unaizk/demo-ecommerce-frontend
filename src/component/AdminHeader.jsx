@@ -28,14 +28,15 @@ const AdminHeader = () => {
           <img onClick={() =>{navigate('/admin')}} className="w-24 cursor-pointer" src={'/logo.png'} alt="Company Logo" /><span className='font-bold'>Admin</span>
         </div>
         <div className="flex items-center mr-10 mx-auto md:mx-0 lg:mx-0">
-          <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
-            { `Welcome ${adminInfo.name}` }
+          <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer ">
+            <p className='mx-auto text-sm'>{ `Welcome ${adminInfo.name}` }</p>
+            
           </div>
           <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
-            <span className='font-bold' onClick={() => navigate('/admin/addProduct')}>Add Products</span>
+            <span className='font-bold mx-auto text-sm' onClick={() => navigate('/admin/addProduct')}>Add Products</span>
           </div>
           <div className="bg-gray-50 rounded-full p-3 mr-4 cursor-pointer">
-              <span className="font-bold" onClick={handleLogoutClick}>
+              <span className="font-bold mx-auto text-sm" onClick={handleLogoutClick}>
                 Log Out
               </span>
           </div>

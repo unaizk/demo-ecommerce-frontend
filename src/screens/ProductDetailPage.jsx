@@ -35,12 +35,11 @@ const ProductDetailPage = () => {
   
   return (
     <div className="container mx-auto p-4 pt-20 shadow-sm  ">
-      <div className="bg-white rounded-lg  p-8">
+      <div className="bg-white rounded-lg  p-8 flex justify-center items-center">
         <div className="flex flex-col lg:flex-row">
           <div
             className="mr-8 lg:mb-0 mb-4 "
             style={{
-              width: "500px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
